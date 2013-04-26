@@ -51,7 +51,8 @@ module ActiveAdmin
 
     # Finds a resource by a given key
     def find_by_key(resource_name)
-      @resource_hash[resource_name]
+      @resource_hash[resource_name] ||
+      @resource_hash.stringify_keys[resource_name]
     end
 
     # Finds a resource based on it's class. Looks up the class Heirarchy if its

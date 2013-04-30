@@ -254,9 +254,9 @@ module ActiveAdmin
         # Add our mixins to the load path for SASS
         ::Sass::Engine::DEFAULT_OPTIONS[:load_paths] <<  File.expand_path("../../../app/assets/stylesheets", __FILE__)
       else
-        require 'active_admin/sass/css_loader'
-        ::Sass::Plugin.add_template_location(File.expand_path("../../../app/assets/stylesheets", __FILE__))
-        ::Sass::Plugin.add_template_location(File.expand_path("../sass", __FILE__))
+        # require 'active_admin/sass/css_loader'
+        # ::Sass::Plugin.add_template_location(File.expand_path("../../../app/assets/stylesheets", __FILE__))
+        # ::Sass::Plugin.add_template_location(File.expand_path("../sass", __FILE__))
       end
     end
   end
